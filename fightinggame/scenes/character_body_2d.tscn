@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dh72t1hp32wo7"]
+
+[ext_resource type="Texture2D" uid="uid://cv410md4u5sco" path="res://assets/tempguy.jpg" id="1_lj8jo"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(92.75, 116.5)
+scale = Vector2(0.203049, 0.219727)
+texture = ExtResource("1_lj8jo")
