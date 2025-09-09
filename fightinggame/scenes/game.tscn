@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://cctvitcnrt3e4"]
+[gd_scene load_steps=3 format=3 uid="uid://cctvitcnrt3e4"]
 
 [ext_resource type="PackedScene" uid="uid://dh72t1hp32wo7" path="res://scenes/character_body_2d.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://cf2xr2pt1g2k8" path="res://scenes/tempplatform.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
 
 [node name="temporaryfella" parent="." instance=ExtResource("1_uwrxv")]
+
+[node name="tempplatform" parent="." instance=ExtResource("2_yqjtg")]
+position = Vector2(6, 334)
