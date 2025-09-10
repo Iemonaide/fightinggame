@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed = 550
 @export var jump_velocity = -420
 @export var gravity = 980 # Adjust based on your game's scale
+@export var max_hp: int = 100
 var can_doublejump = true;
 
 func _physics_process(delta):
@@ -38,3 +39,30 @@ func _physics_process(delta):
 
 	# Move and slide
 	move_and_slide()
+
+var current_hp: int
+signal hp_changed(new_hp: int)
+signal died
+
+func _ready() -> void:
+	current_hp = max_hp
+
+func take_damage(amount: int) -> void:
+	current_hp -= amount
+	current_hp = clamp(current_hp, 0, max_hp)
+
+	emit_signal("hp_changed", current_hp)
+
+	if current_hp <= 0:
+		die()
+
+func die() -> void:
+	emit_signal("died")
+	queue_free()	# Replace with respawn logic if needed
+
+func apply_hit(damage: int, knockback: Vector2) -> void:
+	take_damage(damage)
+
+	# Knockback scales slightly as HP drops
+	var hp_ratio = float(max_hp - current_hp) / max_hp
+	velocity = knockback.normalized() * (damage * 5 + hp_ratio * 50)
