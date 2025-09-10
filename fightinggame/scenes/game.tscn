@@ -10,3 +10,7 @@
 [node name="tempplatform" parent="." instance=ExtResource("2_yqjtg")]
 position = Vector2(-8, 562)
 scale = Vector2(1.03667, 1.68807)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(633, 459)
+zoom = Vector2(0.77, 0.77)
