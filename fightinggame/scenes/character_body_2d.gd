@@ -34,9 +34,7 @@ func _physics_process(delta):
 
 
 	#motion inputs gun head help me help me help me
-	if is_on_floor() and Input.is_action_pressed("up") and Input.is_action_just_pressed("lightattack"):
-		velocity.y = jump_velocity
-
+	#I am not doing this shit now
 
 	# Move and slide
 	move_and_slide()

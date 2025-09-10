@@ -1,10 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh72t1hp32wo7"]
+[gd_scene load_steps=6 format=3 uid="uid://dh72t1hp32wo7"]
 
 [ext_resource type="Script" uid="uid://cpnbqt0wc0h40" path="res://scenes/character_body_2d.gd" id="1_g2brh"]
 [ext_resource type="Texture2D" uid="uid://cv410md4u5sco" path="res://assets/tempguy.jpg" id="1_lj8jo"]
+[ext_resource type="Texture2D" uid="uid://c48cedcjb6khm" path="res://assets/tempslash.png" id="3_dn4c7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lj8jo"]
 size = Vector2(105, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4vejd"]
+size = Vector2(103, 44)
 
 [node name="temporaryfella" type="CharacterBody2D"]
 script = ExtResource("1_g2brh")
@@ -17,3 +21,11 @@ texture = ExtResource("1_lj8jo")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(62.5, 76)
 shape = SubResource("RectangleShape2D_lj8jo")
+
+[node name="uptempslash" type="Sprite2D" parent="."]
+position = Vector2(68, 2)
+texture = ExtResource("3_dn4c7")
+
+[node name="uptempslashhitbox" type="CollisionShape2D" parent="."]
+position = Vector2(62.5, -19)
+shape = SubResource("RectangleShape2D_4vejd")
