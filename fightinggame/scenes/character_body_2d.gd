@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 550
+@export var speed = 650
 @export var jump_velocity = -420
 @export var gravity = 980 # Adjust based on your game's scale
 @export var max_hp: int = 100
