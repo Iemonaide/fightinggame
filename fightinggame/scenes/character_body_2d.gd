@@ -30,8 +30,9 @@ func _physics_process(delta):
 
 	# Fastfall func
 	if !is_on_floor() and Input.is_action_just_pressed("down"):
-		gravity = 3000
-	
+		velocity.y = 500
+
+
 	#motion inputs gun head help me help me help me
 	if is_on_floor() and Input.is_action_pressed("up") and Input.is_action_just_pressed("lightattack"):
 		velocity.y = jump_velocity
