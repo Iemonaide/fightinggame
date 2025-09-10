@@ -8,4 +8,5 @@
 [node name="temporaryfella" parent="." instance=ExtResource("1_uwrxv")]
 
 [node name="tempplatform" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(6, 334)
+position = Vector2(-8, 562)
+scale = Vector2(1.03667, 1.68807)
