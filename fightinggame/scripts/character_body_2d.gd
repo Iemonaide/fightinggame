@@ -41,10 +41,11 @@ func _physics_process(delta):
 
 	#motion inputs gun head help me help me help me
 	#I am not doing this shit now
-	if Input.is_action_pressed("right") and Input.is_action_pressed("lightattack"):
-		$AnimationPlayer.play("tempslash")
-	elif Input.is_action_pressed("up") and Input.is_action_pressed("lightattack"):
-		$AnimationPlayer.play("tempslashup")
+	if is_on_floor() and not $AnimationPlayer.is_playing():
+		if Input.is_action_pressed("right") and Input.is_action_pressed("lightattack"):
+			$AnimationPlayer.play("tempslash")
+		elif Input.is_action_pressed("up") and Input.is_action_pressed("lightattack"):
+			$AnimationPlayer.play("tempslashup")
 
 	# Move and slide
 	move_and_slide()
