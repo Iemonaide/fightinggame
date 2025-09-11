@@ -3,8 +3,7 @@ extends CharacterBody2D
 @export var speed = 650
 @export var jump_velocity = -420
 @export var gravity = 980 # Adjust based on your game's scale
-@export var max_hp: int = 100
-var can_doublejump = true;
+@export var can_doublejump = true
 
 func _physics_process(delta):
 	# Apply gravity
@@ -39,29 +38,30 @@ func _physics_process(delta):
 	# Move and slide
 	move_and_slide()
 
-var current_hp: int
-signal hp_changed(new_hp: int)
-signal died
+# Signals are crucial for decoupling and communication
+@export var max_health: int = 1000
+var current_health: int
+signal health_changed(new_health)
+signal depleted()
 
-func _ready() -> void:
-	current_hp = max_hp
+func _ready():
+	current_health = max_health
+	
+func take_damage(amount: int):
+	# This prevents the health from dropping below zero
+	current_health = max(0, current_health - amount)
+	emit_signal("health_changed", current_health)
+	if current_health <= 0:
+		emit_signal("depleted")
 
-func take_damage(amount: int) -> void:
-	current_hp -= amount
-	current_hp = clamp(current_hp, 0, max_hp)
+func heal(amount: int):
+	# This prevents health from exceeding the maximum
+	current_health = min(max_health, current_health + amount)
+	emit_signal("health_changed", current_health)
 
-	emit_signal("hp_changed", current_hp)
-
-	if current_hp <= 0:
-		die()
-
-func die() -> void:
-	emit_signal("died")
-	queue_free()	# Replace with respawn logic if needed
-
-func apply_hit(damage: int, knockback: Vector2) -> void:
-	take_damage(damage)
-
-	# Knockback scales slightly as HP drops
-	var hp_ratio = float(max_hp - current_hp) / max_hp
-	velocity = knockback.normalized() * (damage * 5 + hp_ratio * 50)
+func set_max_health(new_max: int):
+	if new_max > 0:
+		max_health = new_max
+		# Adjust current health if the new max is lower
+	current_health = min(current_health, max_health)
+	emit_signal("health_changed", current_health)
