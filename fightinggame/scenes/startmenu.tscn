@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b2ipsov4n8jwo"]
+[gd_scene load_steps=2 format=3 uid="uid://b2ipsov4n8jwo"]
+
+[ext_resource type="Script" uid="uid://dwiogrl1nxll7" path="res://scripts/startmenu.gd" id="1_u4tt2"]
 
 [node name="startmenu" type="Control"]
 layout_mode = 3
@@ -7,3 +9,34 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_u4tt2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.281
+anchor_top = 0.545
+anchor_right = 0.694
+anchor_bottom = 0.789
+offset_left = 0.287964
+offset_top = -0.160004
+offset_right = 0.511963
+offset_bottom = -0.272034
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="startbutton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+
+[node name="charselectbutton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Character"
+
+[node name="quitbutton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/startbutton" to="." method="_on_startbutton_pressed"]
