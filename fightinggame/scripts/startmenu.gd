@@ -8,8 +8,12 @@ func _on_startbutton_pressed() -> void:
 
 
 func _on_charselectbutton_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/charselectmenu.tscn")
 
 
 func _on_quitbutton_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_settingsbutton_pressed() -> void:
+	pass # Replace with function body.
