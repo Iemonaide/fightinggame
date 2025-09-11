@@ -25,7 +25,6 @@ func _physics_process(delta):
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity.x = input_direction.x * speed
 
-
 	# Handle jumping
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity

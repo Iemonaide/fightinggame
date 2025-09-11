@@ -40,3 +40,5 @@ layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/startbutton" to="." method="_on_startbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/charselectbutton" to="." method="_on_charselectbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/quitbutton" to="." method="_on_quitbutton_pressed"]
