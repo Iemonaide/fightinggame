@@ -1,15 +1,15 @@
 extends Control
 
 func _ready():
-	$VBoxContainer/startbutton.grab_focus()
+	$VBoxContainer/startBt.grab_focus()
 
-func _on_startbutton_pressed() -> void:
+func _on_startbt_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/game.tscn")
 
 
-func _on_charselectbutton_pressed() -> void:
-	pass # Replace with function body.
+func _on_charselectbt_pressed() -> void:
+	pass
 
 
-func _on_quitbutton_pressed() -> void:
+func _on_quitbt_pressed() -> void:
 	get_tree().quit()

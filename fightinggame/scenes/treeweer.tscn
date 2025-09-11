@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://crl16t8epjfof"]
+
+[ext_resource type="Texture2D" uid="uid://cujksq7b3ux3x" path="res://assets/charselect.png" id="1_aadcl"]
+
+[node name="Treeweer" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Charselect" type="Sprite2D" parent="."]
+position = Vector2(221, 124)
+texture = ExtResource("1_aadcl")
+
+[node name="returnBt" type="Button" parent="."]
+offset_left = 13.0
+offset_top = 8.0
+offset_right = 71.0
+offset_bottom = 39.0
+text = "return"
+
+[node name="swordselect" type="Button" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = 66.0
+offset_right = 81.0
+offset_bottom = 138.0
+
+[node name="halberdselect" type="Button" parent="."]
+visible = false
+offset_left = 98.0
+offset_top = 66.0
+offset_right = 171.0
+offset_bottom = 137.0
+
+[node name="tridentselect" type="Button" parent="."]
+visible = false
+offset_left = 185.0
+offset_top = 65.0
+offset_right = 258.0
+offset_bottom = 137.0
+
+[node name="katanaselect" type="Button" parent="."]
+visible = false
+offset_left = 274.0
+offset_top = 66.0
+offset_right = 346.0
+offset_bottom = 138.0
+
+[node name="nagiselect" type="Button" parent="."]
+visible = false
+offset_left = 360.0
+offset_top = 66.0
+offset_right = 432.0
+offset_bottom = 137.0
+
+[node name="chakramselect" type="Button" parent="."]
+visible = false
+offset_left = 9.0
+offset_top = 153.0
+offset_right = 81.0
+offset_bottom = 226.0
+
+[node name="flaskselect" type="Button" parent="."]
+visible = false
+offset_left = 98.0
+offset_top = 153.0
+offset_right = 170.0
+offset_bottom = 225.0
+
+[node name="hammerselect" type="Button" parent="."]
+visible = false
+offset_left = 185.0
+offset_top = 153.0
+offset_right = 257.0
+offset_bottom = 225.0
+
+[node name="katarselect" type="Button" parent="."]
+visible = false
+offset_left = 274.0
+offset_top = 153.0
+offset_right = 346.0
+offset_bottom = 225.0
+
+[node name="gauntselect" type="Button" parent="."]
+visible = false
+offset_left = 359.0
+offset_top = 154.0
+offset_right = 433.0
+offset_bottom = 226.0

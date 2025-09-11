@@ -1,0 +1,159 @@
+[gd_scene load_steps=2 format=3 uid="uid://osyvf1sdw2sq"]
+
+[ext_resource type="Texture2D" uid="uid://cujksq7b3ux3x" path="res://assets/charselect.png" id="1_ko3nd"]
+
+[node name="Characterselectscreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Charselect" type="Sprite2D" parent="."]
+position = Vector2(573, 322)
+scale = Vector2(2.63073, 2.63008)
+texture = ExtResource("1_ko3nd")
+
+[node name="returnBt" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.011
+anchor_top = 0.042
+anchor_right = 0.157
+anchor_bottom = 0.09
+offset_left = 0.327999
+offset_top = -0.216002
+offset_right = 0.135986
+offset_bottom = -0.320004
+text = "return"
+
+[node name="swordselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.012
+anchor_top = 0.259
+anchor_right = 0.177
+anchor_bottom = 0.551
+offset_left = 0.176
+offset_top = 0.167999
+offset_right = 0.095993
+offset_bottom = -0.0480042
+
+[node name="halberdselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.219
+anchor_top = 0.262
+anchor_right = 0.382
+anchor_bottom = 0.549
+offset_left = -0.28801
+offset_top = 0.223984
+offset_right = -0.0640259
+offset_bottom = 1.24799
+
+[node name="tridentselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.414
+anchor_top = 0.259
+anchor_right = 0.58
+anchor_bottom = 0.552
+offset_left = 0.0719604
+offset_top = 0.167999
+offset_right = -0.160034
+offset_bottom = 0.303955
+
+[node name="katanaselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.616
+anchor_top = 0.258
+anchor_right = 0.785
+anchor_bottom = 0.552
+offset_left = 0.36792
+offset_top = -0.184006
+offset_right = -0.320007
+offset_bottom = 0.303955
+
+[node name="nagiselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.813
+anchor_top = 0.255
+anchor_right = 0.979
+anchor_bottom = 0.552
+offset_left = 0.42395
+offset_top = -0.240021
+offset_right = 0.192017
+offset_bottom = 0.303955
+
+[node name="chakramselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.013
+anchor_top = 0.616
+anchor_right = 0.178
+anchor_bottom = 0.91
+offset_left = 0.0240002
+offset_top = -0.16803
+offset_right = -0.0559998
+offset_bottom = 0.320007
+
+[node name="flaskselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.216
+anchor_top = 0.616
+anchor_right = 0.383
+anchor_bottom = 0.907
+offset_left = 0.167999
+offset_top = -0.16803
+offset_right = -0.216003
+offset_bottom = 0.263977
+
+[node name="hammerselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.414
+anchor_top = 0.619
+anchor_right = 0.582
+anchor_bottom = 0.907
+offset_left = 0.0719604
+offset_top = -0.112
+offset_right = -0.463989
+offset_bottom = 0.263977
+
+[node name="katarselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.618
+anchor_top = 0.614
+anchor_right = 0.782
+anchor_bottom = 0.906
+offset_left = 0.0639648
+offset_top = 0.127991
+offset_right = 0.135925
+offset_bottom = -0.0880127
+
+[node name="gauntselect" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.814
+anchor_top = 0.616
+anchor_right = 0.98
+anchor_bottom = 0.906
+offset_left = 0.271973
+offset_top = -0.16803
+offset_right = 0.0400391
+offset_bottom = -0.0880127
