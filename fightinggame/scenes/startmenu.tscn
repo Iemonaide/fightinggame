@@ -39,10 +39,15 @@ text = "Start"
 layout_mode = 2
 text = "Character"
 
+[node name="settingsbutton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
 [node name="quitbutton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Quit"
 
 [connection signal="pressed" from="VBoxContainer/startbutton" to="." method="_on_startbutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/charselectbutton" to="." method="_on_charselectbutton_pressed"]
+[connection signal="pressed" from="VBoxContainer/settingsbutton" to="." method="_on_settingsbutton_pressed"]
 [connection signal="pressed" from="VBoxContainer/quitbutton" to="." method="_on_quitbutton_pressed"]
