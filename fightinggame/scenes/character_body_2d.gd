@@ -2,23 +2,29 @@ extends CharacterBody2D
 
 @export var speed = 650
 @export var jump_velocity = -420
-@export var gravity = 980 # Adjust based on your game's scale
+@export var gravity = 980 
 @export var can_doublejump = true
+@onready var sprite = $tempguy
 
 func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
+	#check if moving left
+	if velocity.x < 0:
+		sprite.flip_h = true
+	#check if moving right
+	elif velocity.x > 0:
+		sprite.flip_h = false
 	
 	# resets gravity when you touch floor
 	if is_on_floor():
 		gravity = 980
 
-
-
 	# Handle horizontal movement
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity.x = input_direction.x * speed
+
 
 	# Handle jumping
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -35,10 +41,10 @@ func _physics_process(delta):
 
 	#motion inputs gun head help me help me help me
 	#I am not doing this shit now
-	if is_on_floor() and Input.is_action_pressed("right") and Input.is_action_pressed("lightattack"):
-		velocity.x = 0
+	if Input.is_action_pressed("right") and Input.is_action_pressed("lightattack"):
 		$AnimationPlayer.play("tempslash")
-		
+	elif Input.is_action_pressed("up") and Input.is_action_pressed("lightattack"):
+		$AnimationPlayer.play("tempslashup")
 
 	# Move and slide
 	move_and_slide()
