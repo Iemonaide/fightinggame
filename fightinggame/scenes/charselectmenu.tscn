@@ -1,10 +1,16 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=0 format=3 uid="uid://bn4dm7j3q1fv8"]
 =======
+=======
+>>>>>>> Stashed changes
 [gd_scene load_steps=3 format=3 uid="uid://bn4dm7j3q1fv8"]
 
 [ext_resource type="Texture2D" uid="uid://mdnwmniram4t" path="res://assets/tempselectscreen.png" id="1_a2f7p"]
 [ext_resource type="Script" uid="uid://dqr5t85p8hiq" path="res://scripts/charselectmenu.gd" id="1_vfwj6"]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 [node name="charselectmenu" type="Control"]
