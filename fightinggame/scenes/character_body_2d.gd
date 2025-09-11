@@ -14,6 +14,8 @@ func _physics_process(delta):
 	if is_on_floor():
 		gravity = 980
 
+
+
 	# Handle horizontal movement
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity.x = input_direction.x * speed
@@ -31,9 +33,12 @@ func _physics_process(delta):
 	if !is_on_floor() and Input.is_action_just_pressed("down"):
 		velocity.y = 500
 
-
 	#motion inputs gun head help me help me help me
 	#I am not doing this shit now
+	if is_on_floor() and Input.is_action_pressed("right") and Input.is_action_pressed("lightattack"):
+		velocity.x = 0
+		$AnimationPlayer.play("tempslash")
+		
 
 	# Move and slide
 	move_and_slide()
@@ -46,7 +51,7 @@ signal depleted()
 
 func _ready():
 	current_health = max_health
-	
+
 func take_damage(amount: int):
 	# This prevents the health from dropping below zero
 	current_health = max(0, current_health - amount)
