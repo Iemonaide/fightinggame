@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://bh2cuytmk5jyc"]
 
@@ -5,6 +6,11 @@
 =======
 [gd_scene load_steps=0 format=3 uid="uid://b2ipsov4n8jwo"]
 >>>>>>> Stashed changes
+=======
+[gd_scene load_steps=2 format=3 uid="uid://b2ipsov4n8jwo"]
+
+[ext_resource type="Script" uid="uid://dwiogrl1nxll7" path="res://scripts/startmenu.gd" id="1_u4tt2"]
+>>>>>>> parent of 6162e79 (okay?!)
 
 [node name="startmenu" type="Control"]
 layout_mode = 3
