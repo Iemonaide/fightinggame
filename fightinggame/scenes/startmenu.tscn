@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://bybpmtn1morfs"]
+[gd_scene load_steps=2 format=3 uid="uid://bybpmtn1morfs"]
+
+[ext_resource type="Script" uid="uid://drmpdw0kj7g6o" path="res://scripts/startmenu.gd" id="1_u4tt2"]
 
 [node name="Startmenu" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_u4tt2")
 
 [node name="startbt" type="Button" parent="."]
 layout_mode = 1
@@ -19,6 +22,7 @@ offset_left = 0.0479736
 offset_top = 0.223984
 offset_right = 0.479919
 offset_bottom = -0.248001
+action_mode = 0
 text = "Start"
 
 [node name="charselectbt" type="Button" parent="."]
