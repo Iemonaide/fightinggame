@@ -6,6 +6,10 @@ extends CharacterBody2D
 @export var can_doublejump = true
 @onready var sprite = $tempguy
 
+@export var player_id := 1:
+	set(id):
+		player_id = id
+
 func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
