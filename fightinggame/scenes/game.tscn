@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cctvitcnrt3e4"]
 
 [ext_resource type="Script" path="res://scripts/game.gd" id="1_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://b67xkdqua1bn4" path="res://assets/CherryBG.png" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dh72t1hp32wo7" path="res://scenes/character_body_2d.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bie76088a6ewo" path="res://assets/sakurabgFR.png" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cf2xr2pt1g2k8" path="res://scenes/tempplatform.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
@@ -11,7 +11,7 @@ script = ExtResource("1_lbhrr")
 [node name="CherryBg" type="Sprite2D" parent="."]
 position = Vector2(620, 472)
 scale = Vector2(2.7, 2.7)
-texture = ExtResource("1_lnu2h")
+texture = ExtResource("2_lbhrr")
 
 [node name="temporaryfella" parent="." instance=ExtResource("1_uwrxv")]
 
