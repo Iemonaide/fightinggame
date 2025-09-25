@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://osyvf1sdw2sq"]
 
 [ext_resource type="Texture2D" uid="uid://cujksq7b3ux3x" path="res://assets/charselect.png" id="1_ko3nd"]
-[ext_resource type="Script" uid="uid://bpar2hc0eoim6" path="res://scripts/characterselectscreen.gd" id="1_s1q5t"]
+[ext_resource type="Script" path="res://scripts/characterselectscreen.gd" id="1_s1q5t"]
 
 [node name="Characterselectscreen" type="Control"]
 layout_mode = 3
