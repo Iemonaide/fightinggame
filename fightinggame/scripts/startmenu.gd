@@ -5,7 +5,7 @@ func _on_startbt_pressed() -> void:
 
 
 func _on_charselectbt_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/characterselectscreen.tscn")	
+	get_tree().change_scene_to_file("res://scenes/characterselectscreen.tscn")
 
 
 func _on_quitbt_pressed() -> void:

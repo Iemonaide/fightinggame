@@ -66,6 +66,8 @@ text = "Host Game"
 layout_mode = 2
 text = "Join Game"
 
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+
 [connection signal="pressed" from="VBoxContainer/startbt" to="." method="_on_startbt_pressed"]
 [connection signal="pressed" from="VBoxContainer/charselectbt" to="." method="_on_charselectbt_pressed"]
 [connection signal="pressed" from="VBoxContainer/quitbt" to="." method="_on_quitbt_pressed"]
