@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://corp1wm5eo0f3"
-path="res://.godot/imported/sakurastage.png-42c7b3335b47414ed0ca98cc2af640b4.ctex"
+uid="uid://dmanqs32ega2q"
+path="res://.godot/imported/pixil-frame-0 (1).png-5eee405715ca3f5e11bbf8672bf9ebdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sakura/sakurastage.png"
-dest_files=["res://.godot/imported/sakurastage.png-42c7b3335b47414ed0ca98cc2af640b4.ctex"]
+source_file="res://assets/pixil-frame-0 (1).png"
+dest_files=["res://.godot/imported/pixil-frame-0 (1).png-5eee405715ca3f5e11bbf8672bf9ebdd.ctex"]
 
 [params]
 

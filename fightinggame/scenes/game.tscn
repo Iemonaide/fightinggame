@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d17n37bmihfeg" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dh72t1hp32wo7" path="res://scenes/character_body_2d.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://bie76088a6ewo" path="res://assets/Sakura/sakurabgFR.png" id="2_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://bie76088a6ewo" path="res://assets/sakurabgFR.png" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cf2xr2pt1g2k8" path="res://scenes/tempplatform.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
