@@ -14,12 +14,7 @@ func _physics_process(delta):
 	# Apply gravity
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	#check if moving left
-	if velocity.x < 0:
-		sprite.flip_h = true
-	#check if moving right
-	elif velocity.x > 0:
-		sprite.flip_h = false
+
 	
 	# resets gravity when you touch floor
 	if is_on_floor():
