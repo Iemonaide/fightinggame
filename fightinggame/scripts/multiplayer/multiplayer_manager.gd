@@ -10,7 +10,7 @@ var _player_spawn_node
 func become_host():
 	print("starting host")
 	
-	_player_spawn_node = get_tree().get_scene("game").get_node("Players")
+	_player_spawn_node = get_tree().get_current_scene().get_node("Players")
 	
 	var server_peer = ENetMultiplayerPeer.new()
 	server_peer.create_server(SERVER_PORT)
@@ -39,3 +39,8 @@ func _add_player_to_game(id: int):
 
 func _del_player(id: int):
 	print("Player %s left the game" % id)
+	
+func _remove_single_player():
+	print("Remove single player")
+	var player_to_remove = get_tree().get_current_scene().get_node("Player")
+	player_to_remove.queue_free()

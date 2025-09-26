@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cctvitcnrt3e4"]
 
-[ext_resource type="Script" path="res://scripts/game.gd" id="1_lbhrr"]
+[ext_resource type="Script" uid="uid://d17n37bmihfeg" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dh72t1hp32wo7" path="res://scenes/character_body_2d.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bie76088a6ewo" path="res://assets/sakurabgFR.png" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cf2xr2pt1g2k8" path="res://scenes/tempplatform.tscn" id="2_yqjtg"]
@@ -40,4 +40,38 @@ spawn_limit = 2
 
 [node name="Players" type="Node2D" parent="."]
 
+[node name="MultiplayerHUD" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="MultiplayerHUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 2.4
+anchor_bottom = 2.7
+offset_top = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MultiplayerHUD/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HostGame" type="Button" parent="MultiplayerHUD/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Host Game"
+
+[node name="JoinAsPlayer2" type="Button" parent="MultiplayerHUD/Panel/VBoxContainer"]
+layout_mode = 2
+text = "Join Game"
+
+[node name="MultiplayerSpawner2" type="MultiplayerSpawner" parent="."]
+
 [connection signal="pressed" from="VBoxContainer/returntomenu" to="." method="_on_returntomenu_pressed"]
+[connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/HostGame" to="." method="become_host"]
+[connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/JoinAsPlayer2" to="." method="join_as_player_2"]

@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var jump_velocity = -420
 @export var gravity = 980 
 @export var can_doublejump = true
-@onready var sprite = $tempguy
+@onready var sprite = $tempguy2
 
 @export var player_id := 1:
 	set(id):
