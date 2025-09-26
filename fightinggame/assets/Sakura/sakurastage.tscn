@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2e4ofxb3ugrq"]
+
+[ext_resource type="Texture2D" uid="uid://cxxf5fjqrxmh7" path="res://assets/Sakura/sakurastage.png" id="1_gmi3p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_54dx5"]
+size = Vector2(1156.5, 672.5)
+
+[node name="Sakurastage" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(572, 360)
+scale = Vector2(1.99132, 2.08333)
+texture = ExtResource("1_gmi3p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(572, 360)
+shape = SubResource("RectangleShape2D_54dx5")

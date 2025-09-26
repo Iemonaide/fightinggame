@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cctvitcnrt3e4"]
 
 [ext_resource type="Script" uid="uid://d17n37bmihfeg" path="res://scripts/game.gd" id="1_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://dh72t1hp32wo7" path="res://scenes/character_body_2d.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://bie76088a6ewo" path="res://assets/sakurabgFR.png" id="2_lbhrr"]
-[ext_resource type="PackedScene" uid="uid://cf2xr2pt1g2k8" path="res://scenes/tempplatform.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" path="res://scenes/character_body_2d.tscn" id="1_uwrxv"]
+[ext_resource type="Texture2D" uid="uid://bie76088a6ewo" path="res://assets/Sakura/sakurabgFR.png" id="2_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://c2e4ofxb3ugrq" path="res://assets/Sakura/sakurastage.tscn" id="4_lbhrr"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lbhrr")
@@ -15,9 +15,10 @@ texture = ExtResource("2_lbhrr")
 
 [node name="temporaryfella" parent="." instance=ExtResource("1_uwrxv")]
 
-[node name="tempplatform" parent="." instance=ExtResource("2_yqjtg")]
-position = Vector2(3, 557)
-scale = Vector2(1.03667, 1.68807)
+[node name="sakurastage" parent="." instance=ExtResource("4_lbhrr")]
+position = Vector2(3, 475)
+scale = Vector2(2.002, 3.259)
+gravity_scale = 0.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(599, 459)
